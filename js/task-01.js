@@ -13,18 +13,16 @@ function checkNumber(event) {
     // multiply
     const numberInput = event.currentTarget.number.value;
     const multCheck = numberInput * 2;
-    console.log(multCheck);
 
     // add one
     const addOne = numberInput.split("");
     addOne.push(1);
     const addOneCheck = addOne.join("");
-    console.log(addOneCheck);
 
     if (multCheck === addOne) {
-      resultOutput.textContent = `Numbers are equal: ${numberInput} *2 = ${multCheck} are equal to ${numberInput}+1 = ${addOneCheck}. `;
+      resultOutput.textContent = `Numbers are equal: ${numberInput}*2 = ${multCheck} are equal to ${numberInput}+1 = ${addOneCheck}. `;
     } else {
-      resultOutput.textContent = `Can't transform numbers😕: ${numberInput} *2 = ${multCheck} not equal to ${numberInput}+1 = ${addOneCheck}. `;
+      resultOutput.textContent = `Can't transform numbers😕: ${numberInput}*2 = ${multCheck}, not equal to ${numberInput}+1 = ${addOneCheck}. `;
     }
   }
 
