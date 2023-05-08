@@ -11,29 +11,3 @@ for (let i = 0; i < numbers.length; i += 1) {
     }
   }
 }
-
-// for (const number of numbers) {
-//   console.log(number);
-// }
-
-// arr.reduce((findNumber, currentEl) => {
-//   console.log("acc", findNumber);
-//   console.log(currentEl);
-//   if (findNumber !== currentEl) return currentEl;
-
-// });
-
-// arr.reduce((findNumber, currentEl) => {
-//   console.log(findNumber);
-//   console.log(currentEl);
-//   if (findNumber === currentEl) return findNumber;
-//     else {
-//       findNumber = currentEl;
-//     }
-// });
-
-// function findFirstElement() {
-//   const set = new Set(arr);
-//   //   console.log(set);
-//   return set;
-// }
