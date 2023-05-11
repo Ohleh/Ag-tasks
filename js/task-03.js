@@ -89,15 +89,43 @@ const initialValue = [
   },
 ];
 
+const grif = initialValue
+  .filter((el) => el.type === "grif")
+  .map((el) => el.weight)
+  .join();
+const KgDisc = initialValue.filter((el) => el.type === "kg");
 const LbDisc = initialValue.filter((el) => el.type === "lb");
 
-// convert to kg and add value to object
+// convert lb to kg and add value to object
 const LbDiscInKg = LbDisc.map((el) => {
   const convert = el.weight * 0.4535923;
   return (el.weightInKg = convert);
 });
 
-const KgDisc = initialValue.filter((el) => el.type === "kg");
-
 console.log(KgDisc);
 console.log(LbDisc);
+
+const arrKg = KgDisc.map((el) => el.weight); // [0.5, 1, 2.5, 5, 10, 15, 20, 25]
+const arrLbKg = LbDisc.map((el) => el.weightInKg); // [4.535923, 11.339807500000001, 15.8757305, 20.4116535]
+
+//
+const mainArr = arrKg.concat(arrLbKg);
+// console.log(mainArr);
+const sort = [...mainArr].sort((a, b) => a - b);
+console.log(sort);
+console.log("grif", grif);
+
+const summ = mainArr.reduce((acc, number) => {
+  return acc + number;
+}, 0);
+console.log("summ all numbers", summ);
+
+const findWeight = function (x) {
+  console.log("input record", x);
+  const OneDics = (x - grif) / 2;
+  console.log("Two sides", OneDics * 2);
+  console.log("One side", OneDics);
+  return OneDics;
+};
+
+findWeight(30);
